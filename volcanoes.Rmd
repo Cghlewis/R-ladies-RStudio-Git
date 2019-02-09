@@ -83,7 +83,7 @@ Try it on your own and make a graph of the last known eruption for each volcano.
 
 ```{r}
 ggplot(data=lavaData , aes(x=volcano , y=elevation , fill=volcano ))+
-  geom_bar(stat="identity")
+  geom_bar(stat="identity")  
 
 ```
 
