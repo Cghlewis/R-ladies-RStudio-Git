@@ -45,7 +45,7 @@ But Wait! Mauna Loa doesn't have an active lava lake. Let's get rid of it. Befor
 #git -A
 #git -a -m "add initial lava lake bar chart" 
   #Remember, our commit message is a breadcrumb for us to remember why we made this commit
-#git commit push origin
+#git commit push origin master
 
 ```
 
@@ -67,6 +67,8 @@ ggplot(data=lavaData, aes(x= reorder (volcano, -elevation), y=elevation, fill=vo
   ylab("Elevation (in feet)") + 
   xlab ("Volcano") + 
   theme(legend.position="none")
+
+#-elevation is reverse elevation
 ```
 
 Save, add, commit, push! 
@@ -74,14 +76,14 @@ Save, add, commit, push!
 ```{r}
 #git -A
 #git -a -m "add revised lava lake bar chart that omits Mauna Loa" 
-#git commit push origin
+#git push origin master
 ```
 
 Try it on your own and make a graph of the last known eruption for each volcano. If you'd like, go ahead and save, add, commit, and push changes. 
 
 ```{r}
-ggplot(data= , aes(x= , y= , fill= )) +
-  geom_bar(stat = "identity")
+ggplot(data=lavaData , aes(x=volcano , y=elevation , fill=volcano ))+
+  geom_bar(stat="identity")
 
 ```
 
